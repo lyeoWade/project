@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var str=1543464864992;
+	function formatDate(now) { 
+		console.log(now)
+	var d=new Date(now);
+	alert(d);
+		var year=d.getFullYear(); 
+     var month=d.getMonth()+1; 
+     var date=d.getDate(); 
+     var hour=d.getHours(); 
+     var minute=d.getMinutes(); 
+     var second=d.getSeconds(); 
+console.log(year)
+     return year+"-"+month+"-"+date+" "+hour+":"+minute+":"+second; 
+} 
+//如果记得时间戳是毫秒级的就需要*1000 不然就错了记得转换成整型
+
+alert(formatDate(str));
+	</script>
+</body>
+</html>

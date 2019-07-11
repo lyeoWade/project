@@ -1,0 +1,152 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.inj{
+	width:1100px;
+	margin:40px auto 0;
+	background:#fcfcfc;	
+}
+.inj-nav{
+	
+	height:auto;
+	padding:20px 0;
+	border-bottom: 8px solid #1fb5ad;
+	
+}
+.inj-nav h2{
+	text-align:center;
+	font-size:24px;
+	margin-bottom:30px;
+}
+
+.inj-nav p{
+	
+	padding:0 30px;
+	text-align:center;
+	font-size:14px;
+}
+
+
+.inj-content-nav{
+	
+}
+.inj-content-nav ol{
+	height:40px;
+	background:#baf4f1;
+}
+.inj-content-nav ol li{
+	
+	float:left;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+}
+
+.choose-warp{
+	height:50px;
+	margin-top:20px;
+	padding:0 30px;	
+}
+.sorttype a{
+	color: #360B03;
+}
+.sorttype a:active{
+	color: #360B03;
+}
+.sorttype{
+	
+	padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    background: #baf4f1;
+    margin-right: 20px;
+    display: block;
+    color: #360B03;
+    transition: 0.5s;
+}
+.choose-warp .sorttype:hover{
+	background:#1fb5ad;	
+	color:#FDE6E1;
+}
+.choose-warp .active{
+
+	background:#1fb5ad;	
+	color:#FDE6E1;
+}
+.choose-warp{
+	
+}
+.teamname{
+	position:relative;	
+}
+.choose-warp .teamList{
+	display: none;
+	position:absolute;
+	left:0;
+	top:40px;
+	background:#baf4f1;
+	width:480px;
+	font-size:0;
+	
+}
+.choose-warp .teamList li{
+	 height: 32px;
+    line-height: 32px;
+    float: left;
+    width: 80px;
+    font-size: 14px;
+    white-space: nowrap;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.choose-warp .teamList li a{
+	color: #360B03;
+}
+.choose-warp .teamList li:hover{
+	background:#1fb5ad;	
+	color:#fff;
+}
+.inj-content-list{
+	width:100%;
+}
+.inj-content-list table{
+	border-collapse:collapse;
+}
+
+.inj-content-list table td{
+	border:1px solid #ddd;
+	border-left: none;
+	border-right: none;
+	text-align:center;
+	vertical-align:middle;
+	line-height:26px;
+	padding:6px;
+	box-sizing:border-box;
+}
+.inj-content-list table td:nth-last-of-type(1){
+	border-right:1px solid #ddd;
+}
+.inj-content-list table td:first-of-type{
+	border-left:1px solid #ddd;
+}
+.inj-content-list{
+	width:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div id="app">
+		<h2>{{str}}</h2>
+		<h2>{{jsons}}</h2>
+		<h2>{{ {"dara":"1","name":"boy"} }}</h2>
+	</div>
+
+	<script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+
+	<script type="text/javascript">
+		
+		var em = new Vue({
+			el:"#app",
+			data:{
+				str:"asdasda",
+				jsons:"{dara:1,name:boy}"
+			},
+			template:""
+		});
+
+		console.log(em.jsons)
+	</script>
+</body>
+</html>

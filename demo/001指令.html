@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box{
+			width: 300px;
+			height: 300px;
+			background: #f00;
+		}
+		.active{
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+	<div id="app"></div>
+	<script type="text/javascript">
+			
+		new Vue({
+			el:"#app",
+			data:function(){
+				return {
+					str:"v-text比较少用因为有{{}}",
+					Vhtml:"<div >相当于innerHTML</div>",
+					menuLists:[
+						{id:1,name:'张三',sex:'男'},
+						{id:2,name:'李四',sex:'男'},
+						{id:3,name:'陈武',sex:'男'}
+					],
+					obj:{
+						id:1,name:'苹果',price:'8'
+					},
+					isActive:true,
+					isShow:false,
+					
+				}
+			},
+			template:`
+				<div class="app">
+					<div v-text="str"></div>
+					<div v-html="Vhtml"></div>
+					<div v-if="isShow">isShow</div>
+					<div v-else="isShow">隐藏</div>
+					<div class="box" :class="{active:!isActive}" v-on:click="clickThisBox"></div>
+					<ul>
+						<li v-for="item in menuLists">
+							<span v-text="item.id"></span>
+							<p>{{item.name}}</p>
+							<em>{{item.sex}}</em>
+						</li>
+					</ul>
+					<ul>
+						<li v-for="(value ,key ) in obj">
+							<span v-text="key"></span>
+							<p>{{value}}</p>
+						</li>
+					</ul>
+				</div>
+			`,
+			methods:{
+				clickThisBox(e){
+					console.log(this);
+					this.isActive=!this.isActive;
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

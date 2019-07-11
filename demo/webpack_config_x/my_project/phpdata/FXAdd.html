@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>新增比赛分析</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- basic styles -->
+		<link rel="stylesheet" href="assets/css/my_css.css" type="text/css" />
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+	    <link href="css/web_cack.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left">
+					<a href="#" class="navbar-brand">
+						<small>
+							<i class="icon-leaf"></i>
+							后台管理系统
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="light-blue">
+							
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+		
+		<div class="main-container" id="main-container">
+			
+
+			<div class="main-container-inner">
+
+				<div class="sidebar" id="sidebar">
+					<div id="nav">
+
+					</div>
+				</div>
+				<div class="main-content">
+					<!-- 修改,发布球队 -->
+					<div id="edit-warp">
+						<div class="container">
+					        <div class="row">
+					            
+					            <div class="col-lg-12" style="width:100%">
+					                
+					                <div class="content_push">
+					                  <h2 class="bg-info arc_title_h2">
+					                    新增比赛分析
+					                  </h2>
+					                  <p style="line-height: 30px; color: #f00; text-indent: 20px;">操作之前请看，火线-->一行一条,回车换行</p>
+					                </div>
+					            </div>
+					            
+					            <div class="col-lg-12" style="width:100%;">
+					            	 <div class="col-lg-12 warp-add">
+					            	
+					                  <div class="form-group clearfix">
+					                      <label for="ThisTeam" class="col-sm-2 control-label">对阵双方</label>
+					                      <div class="col-sm-9 ">
+					                           	 <input type="text" class="form-control" name="ThisTeam" readonly="readonly" id="ThisTeam" placeholder="">
+					                      </div>
+					                  </div>
+					                 
+
+					                  <div class="form-group clearfix">
+					                      <label for="LiveSignalIn" class="col-sm-2 control-label">让分比例:</label>
+					                      <div class="col-sm-9">
+					                        <textarea class="form-control" rows="6" id="rfbl" placeholder="让分比例"></textarea>
+					                      </div>
+					                  </div>
+					                  <div class="form-group clearfix">
+					                      <label for="LiveSignalIn" class="col-sm-2 control-label">大小分比例:</label>
+					                      <div class="col-sm-9">
+					                        <textarea class="form-control" rows="6" id="dxbl" placeholder="大小分比例"></textarea>
+					                      </div>
+					                  </div>
+
+					                  
+					                  <div class="form-group clearfix">
+					                      <label for="LiveSignalIn" class="col-sm-2 control-label">交手分析:</label>
+					                      <div class="col-sm-9">
+					                        <textarea class="form-control" rows="6" id="jsfx" placeholder="交手分析"></textarea>
+					                      </div>
+					                  </div>
+					                  <div class="form-group clearfix">
+					                      <label for="LiveSignalOut" class="col-sm-2 control-label">主队近期概况:</label>
+					                      <div class="col-sm-9">
+					                         <textarea class="form-control" id="zdInfo" rows="6" placeholder="客队近期概况"></textarea>
+					                      </div>
+					                  </div>
+					                  <div class="form-group clearfix">
+					                      <label for="LiveText" class="col-sm-2 control-label">客队近期概况</label>
+					                      <div class="col-sm-9 ">
+					                            
+					                            <textarea class="form-control" id="kdInfo" rows="6" placeholder="客队近期概况"></textarea>
+					                      </div>
+					                  </div>
+					                 
+					                  <!-- <div class="form-group clearfix">
+					                      <label for="descention" class="col-sm-2 control-label">火线速递:</label>
+					                      <div class="col-sm-9">
+					                      	<textarea class="form-control" id="hxInfo" rows="3" placeholder="火线速递"></textarea>
+					                      </div>
+					                  </div> -->
+
+					                   <div class="form-group" >
+					                      <label for="" class="col-sm-2 control-label"></label>
+					                      <div class="col-sm-9">
+					                         <input type="button" id="surebtn" class="form-control btn btn-info" value="确定">
+					                      </div>
+					                  </div>
+					                  </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+		<script src="assets/js/jquery-2.0.3.min.js"></script>
+		<!-- <![endif]-->
+		<script src="assets/js/bootstrap.min.js"></script>
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace.min.js"></script>
+<script src="js/module.js"></script>
+<script>
+module.nav.data();
+
+</script>
+
+<script type="text/javascript">
+$(function(){
+	//获取当天日期
+	$('#ThisTeam').val( decodeURIComponent(geturldata(window.location.href).team));
+	var gameId=geturldata(window.location.href).id;
+	
+
+
+	$("#surebtn").on('click',function(){
+		//alert(getCookie('username'));
+		var $rfbl=$("#rfbl").val();
+		
+		var $dxbl=$("#dxbl").val();
+		var $jsfx=$("#jsfx").val();
+		var $zdInfo=$("#zdInfo").val();
+		var $kdInfo=$("#kdInfo").val();
+		//alert(typeof $zdInfo);
+		var timestamp=new Date().getTime();		//return false;
+		// var LiveIn=$LiveSignalIn.replace(/&/g,'fuck0');
+		// var LiveOut=$LiveSignalOut.replace(/&/g,'fuck0');
+		// var ScoreLive=$ScoreLive.replace(/&/g,'fuck0');
+		// var LiveText=$LiveText.replace(/&/g,'fuck0');
+
+
+		var datas="type=AddOnePlayFX&gameId="+gameId+"&rfbl="+$rfbl+','+timestamp+"&dxbl="+$dxbl+','+timestamp+"&jiaoshou="+$jsfx+"&zdfx="+$zdInfo+"&kdfx="+$kdInfo+"";
+		//alert(datas)
+
+
+	//	gameId,rfbl,dxbl,jiaoshou,zdfx,kdfx,
+		$.ajax({
+			url:"datapage/getInfoPage.php",
+			type:"POST",
+			data:datas,
+			success:function(str){
+				console.log(str);
+				var oData=eval('('+str+')');
+				if(oData.respondCode==0){
+					alert(oData.respondMsg);
+				}else{
+					alert(oData.respondMsg);
+				}
+			}
+		})
+	});
+})
+</script>
+
+</body>
+</html>

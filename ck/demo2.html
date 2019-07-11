@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript" src="ckplayer/ckplayer.js"></script>
+<div class="video" style="width: 1000px;height: 600px;"></div>
+<script type="text/javascript">
+
+	// var url2='http://61.128.150.124:8080/vzb.tc.qq.com/951D4D1D240B892CF0188DF1013F878EA5772EFB82D7A049AB6243E60E2BADCE97114AA16685EC33F35789C93FD2BAD15084EF6E24302675EA7BC7E8FD78FC0D6BE76A2B3F0464C9976A9F48889AD65C6051D94FEA4A0EAE/100205001.flv?cdncode=%2f18907E7BE0798990%2f%26time=1523614682%26cdn=zijian%26sdtfrom=v20131%26platform=113%26butype=2%26scheduleflag=1%26buname=qqlive%26vkey=951D4D1D240B892CF0188DF1013F878EA5772EFB82D7A049AB6243E60E2BADCE97114AA16685EC33F35789C93FD2BAD15084EF6E24302675EA7BC7E8FD78FC0D6BE76A2B3F0464C9976A9F48889AD65C6051D94FEA4A0EAE'
+	// var videoObject = {
+	// 	container: '.video',//“#”代表容器的ID，“.”或“”代表容器的class
+	// 	variable: 'player',//该属性必需设置，值等于下面的new chplayer()的对象
+	// 	advertisements:'website:ckplayer/ad.js',
+	// 	autoplay:true,//自动播放
+	// 	//live:true,
+	// 	video:'https://www3.laqddc.com/hls/2018/04/01/NTByziu9/playlist.m3u8'//视频地址
+	// };
+	// var player=new ckplayer(videoObject);
+
+
+
+
+</script>
+
+
+<div class="video" style="width: 1000px;height: 600px;"></div>
+<script type="text/javascript">
+	var videoObject = {
+		container: '.video',//“#”代表容器的ID，“.”或“”代表容器的class
+		variable: 'player',//该属性必需设置，值等于下面的new chplayer()的对象
+		autoplay:true,
+		html5m3u8:true,
+		video:'http://cdn.theoplayer.com/video/star_wars_episode_vii-the_force_awakens_official_comic-con_2015_reel_(2015)/index.m3u8'//视频地址
+	};
+	var player=new ckplayer(videoObject);
+</script>
+</body>
+</html>
+
+

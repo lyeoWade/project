@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="aplus-terminal" content="1"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<!-- 这meta的作用就是删除默认的苹果工具栏和菜单栏。content有两个值”yes”和”no” -->
+	<meta name="apple-touch-fullscreen" content="no"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<!-- 清除微信缓存 -->
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta name="viewport" content="width=device-width , initial-scale=1.0 , maximum-scale=1.0">
+	<link href="../css/reset.css" type="text/css" rel="stylesheet" />
+	<!-- <link rel="stylesheet" type="text/css" href="css/com.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="js/com.js"></script>
+	<script type="text/javascript" src="js/llq.m.1.js"></script>
+	<title>NBA伤病信息 - 约个球 </title>
+	<meta name="keywords" content="NBA,伤病,受伤,缺席,手术,彩票,篮彩">
+	<meta name="description" content="24小时实时更新，伤病消息来自国外可靠的体育媒体、NBA记者及球队官方，比国内更快！">
+</head>
+<body style="background: #fff;">
+	<!-- <header class="header">
+		<a href="home.html" class="fl logo-m"><img src="images/logo.png"></a>
+		<a href="" class="fr userIcon"></a> 
+	</header> -->
+<!-- 	<nav class="nav">
+		<div class="navwrap">
+			
+			<a href="zhibo.html">直播</a>
+			<a href="shipin.html" class="active">视频</a>
+			
+			
+		</div>
+	</nav> -->
+	<!-- 第一手 -->
+	
+	<div id="siteHeader"></div>
+	<div id="TopAD"></div>
+	<section id="video" class="">
+		<!-- <div class="video-head news-head">
+			<h2 class="fl">精彩视频</h2>
+			
+		</div> -->
+		<!-- 视频推荐 -->
+		<div class="sb-info">
+			<h1>NBA实时伤停更新</h1>
+			<span>伤停消息均来自国内外可靠的体育媒体、NBA记者以及球队官方，力求快速准确，但也难免偶尔官方出现错误或者教练临时调整，望各位见谅。</span>
+			<p>最近一次更新时间：<time class="times"></time></p>
+		</div>
+		<div class="sb-team all-team">
+			<h2>火箭队<span>返回<b></b></span></h2>
+			<table>
+				<thead>
+					<tr>
+						<th class="wp30">球员</th>
+						<th class="wp20">状态</th>
+						<th class="wp50">原因</th>
+					</tr>
+				</thead>
+				<tbody id="NBAinj">
+					
+				</tbody>
+
+				<tbody id="one-NBAinj" style="display: none;">
+					<tr>
+						<td class="wp30"><span class="sb-name">丹尼尔-汉密尔顿</span><br><span class="sb-teamname">亚特兰大老鹰</span></td>
+						<td class="wp20"><span class="sb-reason">预计出场</span></td>
+						<td class="sb-detail">7月26日，丹尼尔-汉密尔顿一年合同加盟老鹰！</td>
+					</tr>
+					<tr>
+						<td class="wp30"><span class="sb-name">麦克-穆斯卡拉</span><br><span class="sb-teamname">亚特兰大老鹰</span></td>
+						<td class="wp20"><span class="sb-reason">缺席</span></td>
+						<td class="sb-detail">7月26日，丹尼尔-汉密尔顿一年合同加盟老鹰！汉密尔顿一年合同加盟老鹰！汉密尔顿一年合同加盟老鹰！汉密尔顿一年合同加盟老鹰！汉密尔顿一年合同加盟老鹰！汉密尔顿一年合同加盟老鹰！汉密尔顿一年合同加盟老鹰</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+<!-- 		<div class="sb-team one-team">
+			<h2>火箭队</h2>
+			<table>
+				<tbody id="one-NBAinj">
+					<tr>
+						<td class="wp30"><span class="sb-name">丹尼尔-汉密尔顿</span><br><span class="sb-teamname">亚特兰大老鹰</span></td>
+						<td class="wp20"><span class="sb-reason">预计出场</span></td>
+						<td class="sb-detail">7月26日，丹尼尔-汉密尔顿一年合同加盟老鹰！</td>
+					</tr>
+					<tr>
+						<td class="wp30"><span class="sb-name">麦克-穆斯卡拉</span><br><span class="sb-teamname">亚特兰大老鹰</span></td>
+						<td class="wp20"><span class="sb-reason">缺席</span></td>
+						<td class="sb-detail">7月26日，丹尼尔-汉密尔顿一年合同加盟老鹰！汉密尔顿一年合同加盟老鹰！汉密尔顿一年合同加盟老鹰！汉密尔顿一年合同加盟老鹰！汉密尔顿一年合同加盟老鹰！汉密尔顿一年合同加盟老鹰！汉密尔顿一年合同加盟老鹰</td>
+					</tr>
+				</tbody>
+			</table>
+		</div> -->
+
+	</section>
+	
+	<div style="height: 0.6rem; width: 100%; background: #fff;"></div>
+	<!-- 底部菜单 -->
+	<div class="team-search" style="display: none;">
+		<p>西部</p>
+		<div>
+			<ul>
+				<li class="Race-area"><span>太平洋</span></li>
+				<li><a href="javascript:;" teamid="30">勇士</a></li>
+				<li><a href="javascript:;" teamid="29">快船</a></li>
+				<li><a href="javascript:;" teamid="28">湖人</a></li>
+				<li><a href="javascript:;" teamid="40">国王</a></li>
+				<li><a href="javascript:;" teamid="37">太阳</a></li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li class="Race-area"><span>西南</span></li>
+				<li><a href="javascript:;" teamid="31">火箭</a></li>
+				<li><a href="javascript:;" teamid="41">鹈鹕</a></li>
+				<li><a href="javascript:;" teamid="27">马刺</a></li>
+				<li><a href="javascript:;" teamid="32">独行侠</a></li>
+				<li><a href="javascript:;" teamid="35">灰熊</a></li>
+			</ul>
+		</div>
+		
+		<div>
+			<ul>
+				<li class="Race-area"><span>西北</span></li>
+				<li><a href="javascript:;" teamid="34">开拓者</a></li>
+				<li><a href="javascript:;" teamid="33">雷霆</a></li>
+				<li><a href="javascript:;" teamid="36">爵士</a></li>
+				<li><a href="javascript:;" teamid="39">森林狼</a></li>
+				<li><a href="javascript:;" teamid="38">掘金</a></li>
+			</ul>
+		</div>
+		<p>东部</p>
+		<div>
+			<ul>
+				<li class="Race-area"><span>大西洋</span></li>
+				<li><a href="javascript:;" teamid="23">猛龙</a></li>
+				<li><a href="javascript:;" teamid="15">凯尔特人</a></li>
+				<li><a href="javascript:;" teamid="21">76人</a></li>
+				<li><a href="javascript:;" teamid="17">尼克斯</a></li>
+				<li><a href="javascript:;" teamid="16">篮网</a></li>
+			</ul>	
+		</div>
+		<div>
+			<ul>
+				<li class="Race-area"><span>东南</span></li>
+				<li><a href="javascript:;" teamid="12">热火</a></li>
+				<li><a href="javascript:;" teamid="26">奇才</a></li>
+				<li><a href="javascript:;" teamid="18">黄蜂</a></li>
+				<li><a href="javascript:;" teamid="24">魔术</a></li>
+				<li><a href="javascript:;" teamid="19">老鹰</a></li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li class="Race-area"><span>中部</span></li>
+				<li><a href="javascript:;" teamid="13">骑士</a></li>
+				<li><a href="javascript:;" teamid="25">步行者</a></li>
+				<li><a href="javascript:;" teamid="22">雄鹿</a></li>
+				<li><a href="javascript:;" teamid="14">活塞</a></li>
+				<li><a href="javascript:;" teamid="20">公牛</a></li>
+			</ul>
+		</div>
+		
+	</div>
+	<div class="sb-team-list">
+		<a href="javascript:;" class="listBtn"></a>
+	</div>
+	
+	<div class="one-team">
+		
+	</div>
+	<!-- <div class="bottom-nav">
+		<ul class="">
+			<li><a href="zhibo.html" class="nva-zb">直播</a></li>
+			<li><a href="shipin.html" class="nva-sp">视频</a></li>
+			<li><a href="" class="nva-wx">公众号</a></li>
+			<li><a href="" class="nva-wz">文章</a></li>
+			<li><a href="" class="nva-sb">伤病</a></li>
+		</ul>
+	</div> -->
+	<script type="text/javascript">
+		var oLlq=new Llq();
+		//oLlq.navScroll('.navwrap');
+		oLlq.getInjList();
+		
+		//return false;
+		$(function(){
+			var ind=1;
+			$('.listBtn').on('click',function(){
+				if(ind==1){
+					$('.team-search').css('display','block');
+					ind=0;
+				}else{
+					$('.team-search').css('display','none');
+					ind=1;
+				}
+			});
+
+
+			$('.team-search li a').on('click',function(){
+				//alert($(this).attr('teamid'));
+				//
+				
+				$('.team-search').css('display','none');
+					ind=1;
+
+				var teamID=$(this).attr('teamid'),
+				datas="type=GetInjuriesList&teamID="+teamID;
+				//alert(datas)
+				$.ajax({
+					url:"../phpdata/datapage/nbainj.php",
+					type:"POST",
+					data:datas,
+					success: function(str){
+						console.log(str)
+						var json=$.parseJSON(str);
+						
+						var Liststr='';
+						console.log(json)
+						if(json.counts==0){
+							$('#NBAinj').html(`<tr><td class="wp30"><span class="sb-name">暂无</span></td>'
+									<td class="wp20"><span class="sb-reason">-</span></td>
+									<td class="sb-detail">-</td>
+								</tr>`);
+						}else{
+
+							for(var i=0; i<json.result.length; i++){
+								var newjson=eval('('+json.result[i]+')');
+
+								Liststr+=`<tr><td class="wp30"><span class="sb-name">`+newjson.player+`</span><br><span class="sb-teamname">`+newjson.teamName+`</span></td>'
+									<td class="wp20"><span class="sb-reason">`+newjson.reason+`</span></td>
+									<td class="sb-detail">`+newjson.timetable+`</td>
+								</tr>`;
+							}
+							
+							$('#NBAinj').html(Liststr);
+
+							
+						}
+						
+					},
+					error: function(){
+						
+					}
+				});	
+			});
+		});
+	</script>
+</body>
+</html>

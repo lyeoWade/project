@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app"></div>
+	adsd
+<script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript" src="./node_modules/axios/dist/axios.js"></script>
+<script type="text/javascript">
+	
+	import qss from './node_modules/qs/dist/qs'
+	
+	var data = qs.stringify({ 
+		id: "GetOneArticleInfo", 
+		type: "116",
+	});
+
+
+	var App={
+		template:`
+			<div @click="postMsg">点击我发送信息</div>
+		`,
+		methods:{
+			postMsg(){
+
+				axios.post('../phpdata/datapage/arclist.php', data)
+				.then(function (str) {
+				    console.log(str);
+				})
+				.catch(function (error) {
+				    console.log(error);
+			    });
+
+			}
+		}
+	}
+
+	new Vue({
+		el:'#app',
+		data(){
+			return{
+
+			}
+		},
+		template:`<App/>`,
+		components:{
+			App
+		}
+	});
+
+</script>
+</body>
+</html>

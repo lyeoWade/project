@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app"></div>
+<script type="text/javascript" src="./node_modules/vue/dist/vue.min.js"></script>	
+<script type="text/javascript">
+	
+	//改变子组件的内容父组件的内容同时改变 $emit
+	var Child={
+		template:`
+			<input type="text" v-model="PData" v-on:input="changes(PData)" />
+		`,
+		props:['PData'],
+		methods:{
+			changes(PData){
+				this.$emit('clickHandle',PData)
+			}
+		}
+	}
+
+	var App={
+		data(){
+			return {
+				msg:"我是父组件的文字"
+			}
+		},
+		template:`
+			<div>
+				入口组件{{msg}}
+
+				<Child :PData="msg" @clickHandle="clickHandles"></Child>
+			</div>
+		`,
+		components:{
+			Child
+		},
+		methods:{
+			clickHandles(val){
+				console.log(val)
+				this.msg=val
+			}000000000
+		}
+	}
+
+
+	new Vue({
+
+		el:"#app",
+		data(){
+			return{
+
+			}
+		},
+		template:`<App />`,
+		components:{
+			App
+		}
+	});
+</script>
+</body>
+</html>

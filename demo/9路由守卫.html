@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<router-link to="/home">首页</router-link>
+		<router-link to="/blog">我是博客</router-link>
+		<router-view></router-view>
+	</div>
+
+	<script src="./node_modules/vue/dist/vue.js"></script>
+	<script type="text/javascript" src="./node_modules/vue-router/dist/vue-router.js"></script>
+	<script type="text/javascript">
+		
+		var Home={
+			template:`
+				<div>我是首页</div>
+			`
+		}
+
+		var Blog={
+			template:`
+				<div>我是博客</div>
+			`
+		}
+
+
+		var Login={
+			data(){
+				return {
+					pass:'123456',
+					name:'xsir'
+				}
+			},
+			template:`
+				<div>
+					<input type="text" v-model="name" />
+					<input type="password" v-model="pass" />
+					<button @click="loginUser">登录</button>
+				</div>
+			`,
+			methods:{
+				loginUser(){
+					console.log(this.name , this.pass);
+
+					localStorage.setItem('user',{'name':this.name,"pass":this.pass});
+
+					router.push({
+						path:'/blog',
+					});
+				}
+			}
+		}
+		var router=new VueRouter({
+
+			routes:[
+				{
+					path:'/',
+					redirect:'/home'
+				},
+				{
+					path:'/home',
+					component:Home
+				},
+				{
+					path:'/blog',
+					name:'blog',
+					component:Blog,
+					meta:{
+						isLogin:true
+					}
+				},
+				{
+					path:'/login',
+					component:Login
+				}
+			]
+
+		});
+		
+
+		router.beforeEach((to, from , next)=>{
+			
+			//console.log(to.meta.isLogin);
+			if(to.meta.isLogin){
+
+				if(localStorage.getItem('user')){
+					next();
+				}else{
+					next({
+						path:'/login'
+					});
+				}
+
+				
+			}else{
+				next();
+			}
+			
+			console.log(from)
+			//console.log(this.meta)
+		});
+
+
+		new Vue({
+			el:"#app",
+			data(){
+				return {
+
+				}
+			},
+			router
+		});
+
+	</script>
+	
+</body>
+</html>

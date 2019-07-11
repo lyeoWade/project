@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app"></div>
+	<script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+	<script type="text/javascript">
+		
+		
+		//全局组件 全局共享 ->中央空调
+		//局部组件 只在当前组件内部使用
+		//
+		//
+		Vue.component('Parent',{
+			data(){
+				return{
+					msg:"我是父组件2"
+				}
+			},
+			template:`
+				<div>
+					{{msg}}
+					<Child :Parents="msg" />
+				</div>
+			`
+		});
+
+
+
+
+		Vue.component("Child",{
+			data(){
+				return {
+					msg:"我是声明的子组件"
+				}
+			},
+			props:['Parents'],
+			template:`
+				<div>
+					{{msg+Parents}}
+					<input type="text" v-model='Parents'  />
+				</div>
+			`,
+			components:{
+				
+			}
+		});
+
+
+
+
+
+		var AllConmponents={
+			data(){
+				return{
+					msg:"我是父组件"
+				}
+			},
+			template:`
+				<div >
+					<Parent />
+				</div>
+			`,
+			components:{
+				//Parent
+			}
+		};
+
+		new Vue({
+			el:"#app",
+			data(){
+				return {
+
+				}
+			},
+			template:'<AllConmponents />',
+			components:{
+				AllConmponents
+			}
+		});
+
+	</script>
+</body>
+</html>

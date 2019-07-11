@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app"></div>
+<script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>	
+<script type="text/javascript">
+Vue.component('C',{
+	template:`
+		<div>
+			
+			<div @click="cHander">s{{$attrs.msg}}</div>
+		</div>
+	`,
+	methods:{
+		cHander(){
+			alert(1);
+			this.$emit('getData','我是C的数据');
+		}
+	}
+});	
+Vue.component('B',{
+	template:`
+		<div>我是B
+			<C v-bind="$attrs" v-on="$listeners"></C>
+		</div>
+	`,
+	components:{
+		
+	}
+});
+Vue.component('A',{
+	props:["msg"],
+	template:`
+		<div>
+			我是A组件{{msg}}
+			<B v-bind="$attrs" v-on="$listeners"></B>
+		</div>
+	`,
+	components:{
+		
+	}
+});
+
+// var C={
+// 	template:`
+// 		<div>
+			
+// 			<div @click="cHander">s{{$attrs.msg}}</div>
+// 		</div>
+// 	`,
+// 	methods:{
+// 		cHander(){
+// 			alert(1);
+// 			this.$emit('getData','我是C的数据');
+// 		}
+// 	}
+// }
+
+// var B={
+// 	template:`
+// 		<div>我是B
+// 			<C v-bind="$attrs" v-on="$listeners"></C>
+// 		</div>
+// 	`,
+// 	components:{
+// 		C
+// 	}
+// }
+
+// var A={
+	
+// 	props:["toA"],
+// 	template:`
+// 		<div>
+// 			我是A组件{{toA}}
+// 			<B v-bind="$attrs" v-on="$listeners"></B>
+// 		</div>
+// 	`,
+// 	components:{
+// 		B
+// 	}
+
+// }
+
+var App={
+	data(){
+		return {
+			msg:"MSGSweq4wr34535345"
+		}
+	},
+	template:`
+		<div >
+			<p>App</p>
+			
+			<A :msg="msg" v-on:getData="getData"></A>
+		</div>
+	`,
+	components:{
+		//A
+	},
+	methods:{
+		getData(val){
+			console.log(val)
+		}
+	}
+
+}	
+ new Vue({
+ 	el:"#app",
+ 	data(){
+ 		return {
+
+ 		}
+ 	},
+ 	template:`<App />`,
+ 	components:{
+ 		App 
+ 	}
+ });
+</script>
+</body>
+</html>

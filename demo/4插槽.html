@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id="app"></div>
+	<script type="text/javascript" src="./node_modules/vue/dist/vue.min.js"></script>
+	<script type="text/javascript">
+		
+		Vue.component('Btn',{
+
+				template:`
+						<button>
+							<slot>anniu</slot>
+						</button>
+				`
+
+		});
+
+
+		var App={
+			template:`
+				<div>父组件
+						<Btn>按钮1</Btn>
+						<Btn>按钮2</Btn>
+						<Btn>按钮3</Btn>
+						<Btn>按钮4</Btn>
+				</div>
+			`,
+
+		}
+		
+		new Vue({
+			el:"#app",
+			data(){
+				return {
+
+				}
+			},
+			template:`<App />`,
+			components:{
+				App
+			}
+		})
+
+
+	</script>
+</body>
+</html>

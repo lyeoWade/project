@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+</style>
+<script type="text/javascript" src="../ck/ckplayer/ckplayer.js"></script>
+<div class="video" style="width: 1000px;height: 600px;"></div>
+<script type="text/javascript">
+
+	//var url='http%3A%2F%2Fflvtx.plu.cn%2Fonlive%2F26647b99a5154c7bb6f6d5b7f4b907d1.flv%3FtxSecret%3D3255e53868a5b0d01391cecf315d5cbd%26txTime%3D5ad085c2';
+
+	//http%3A%2F%2Fflvtx.plu.cn%2Fonlive%2F0f6c48d40e314ced9fdacf6488a82e28.flv%3FtxSecret%3Daa6313a6b06a20bd3e8d62a4eaad9f5c%26txTime%3D5ad1d43f
+
+	var url2='http://61.128.150.124:8080/vzb.tc.qq.com/951D4D1D240B892CF0188DF1013F878EA5772EFB82D7A049AB6243E60E2BADCE97114AA16685EC33F35789C93FD2BAD15084EF6E24302675EA7BC7E8FD78FC0D6BE76A2B3F0464C9976A9F48889AD65C6051D94FEA4A0EAE/100205001.flv?cdncode=%2f18907E7BE0798990%2f%26time=1523614682%26cdn=zijian%26sdtfrom=v20131%26platform=113%26butype=2%26scheduleflag=1%26buname=qqlive%26vkey=951D4D1D240B892CF0188DF1013F878EA5772EFB82D7A049AB6243E60E2BADCE97114AA16685EC33F35789C93FD2BAD15084EF6E24302675EA7BC7E8FD78FC0D6BE76A2B3F0464C9976A9F48889AD65C6051D94FEA4A0EAE'
+	var videoObject = {
+		container: '.video',//“#”代表容器的ID，“.”或“”代表容器的class
+		variable: 'player',//该属性必需设置，值等于下面的new chplayer()的对象
+		advertisements:'website:ckplayer/ad.js',
+		autoplay:true,//自动播放
+		//live:true,
+		video:'http://audio.live.cntv.dnion.com/cache/214_/seg0/index.m3u8?AUTH=UUbpVvCrO4FIj151WnBUiIkQEHKdrM1bfNjYPeN1ybK/D2hOkw5MYCmEQMCnuTG4aMrpbCfQQ05qW1w2KWtGfQ=='//视频地址
+	};
+	var player=new ckplayer(videoObject);
+</script>
+
+</body>
+</html>

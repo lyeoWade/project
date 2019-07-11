@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	*{
+		margin:0;
+		padding: 0;
+	}
+	ul{
+		list-style: none;
+	}
+	li{
+		margin: 20px;
+	}
+</style>
+<body>
+	<div id="app">
+		<audio autoplay="" :src="getCurrentSrc" controls=""></audio>
+		<ul>
+			<li v-for="(item , key) in MusicData" @click="PlayMusic(key)">
+				<h2>{{key}} - {{item.name}} - {{item.author}}</h2>
+				<p>{{item.songSrc}}</p>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+	<script type="text/javascript">
+		
+		var musicData=[
+			{id:'1',name:"难受",author:"赵雷",songSrc:"./static/赵雷 - 醉了 .mp3"},
+			{id:'2',name:"Never Be The Same",author:"Camila Cabello",songSrc:"./static/Never Be the Same.m4a"},
+			{id:'3',name:"咬之歌",author:"尧十三",songSrc:"./static/咬之歌-尧十三.mp3"},
+			{id:'4',name:"生活不止眼前的苟且",author:"许巍",songSrc:"./static/生活不止眼前的苟且-许巍.mp3"},
+		]
+
+		new Vue({
+			el:"#app",
+			data(){return{
+				MusicData:musicData,
+				iNum:0
+			}},
+			computed:{
+				getCurrentSrc:function(){
+					return this.MusicData[this.iNum].songSrc;
+				}
+			},
+			methods:{
+				PlayMusic(index){
+					
+					console.log(index);
+					//当this.iNum修改  计算属性computed实时监听iNum 
+					this.iNum=index;
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

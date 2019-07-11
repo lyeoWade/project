@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app"></div>
+	<script type="text/javascript" src="./node_modules/vue/dist/vue.min.js"></script>
+	<script type="text/javascript">
+		
+		
+		
+
+
+
+		//在子组件中出发原生的事件在函数中使用$emit出发自定义的事件
+		Vue.component("Child",{
+			
+			template:`
+				<div>
+					{{childData}}
+					<input type="text" v-model='childData' @input="changeNum(childData)" />
+				</div>
+			`,
+			props:['childData'],
+			methods:{
+				changeNum(val){
+					console.log(val)
+					this.$emit('childHandlers',val);
+				}
+			}
+		});
+
+
+
+
+		//
+		//字符组件中绑定自定义的事件
+		Vue.component('Parent',{
+			data(){
+				return{
+					msg:"我是父组件2"
+				}
+			},
+			template:`
+				<div>
+					{{msg}}
+					<Child :childData="msg" @childHandlers="childHandler" />
+				</div>
+			`,
+			methods:{
+				childHandler(val){
+					//console.log(val)
+					this.msg=val
+				}
+			}
+		});
+
+
+
+		var App={
+			data(){
+				return{
+					
+				}
+			},
+			template:`
+				<div >
+					<Parent />
+				</div>
+			`,
+			components:{
+				//Parent
+			}
+		};
+
+		new Vue({
+			el:"#app",
+			data(){
+				return {
+
+				}
+			},
+			template:'<App />',
+			components:{
+				App
+			}
+		});
+
+	</script>
+</body>
+</html>

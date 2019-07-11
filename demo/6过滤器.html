@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./node_modules/vue/dist/vue.min.js"></script>
+</head>
+<body>
+	
+	<div id="app"></div>
+		
+	<script type="text/javascript">
+		
+		new Vue({
+			el:"#app",
+			data(){return {
+				num:0
+			}},
+			template:`
+				<div >
+					<input type="number" v-model="num"  />{{num | curency}}
+				</div>
+			`,
+			filters:{
+				curency:function(val){
+					return "￥"+val;
+				}
+			}
+
+		})
+	</script>
+</body>
+</html>
