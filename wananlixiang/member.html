@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>晚安理想</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/public.js"></script>
+	<style type="text/css">
+	.user-wrap{
+		position: relative;
+		
+	}
+	.user-nav{
+		z-index: 99999;
+	}
+	.devote-list{
+		padding:20px !important;
+		width:850px !important;
+	}
+	</style>
+</head>
+<body>
+<canvas style='position:fixed; left:0; top:0'></canvas>
+	<div id="nav-warp">
+		<div class="nav-wrap-box">
+			<div class="nav-l fl">
+				<div class="site-logo fl"><img src=""></div>
+				<div class="site-nav fl">
+					<a href="index.html">首页</a>
+					<a href="wananlist.html" class="">晚安&nbsp;&bull;&nbsp;理想</a>
+					<a href="satin.html" class="">愉悦&nbsp;&bull;&nbsp;段子</a>
+					<a href="world.html">走遍&nbsp;&bull;&nbsp;世界</a>
+				</div>
+				<!-- <div class="site-search fl">
+					<input type="text" value="" placeholder="sousuo" class="search">
+					<a href="javascrit:;"></a>
+				</div> -->
+			</div>
+			<div class="nav-r fr">
+				<div class="login-wrap show">
+					<a href="reg.html" class="reg">注册</a>
+					<a href="denglu.html" class="login">登录</a>
+				</div>
+				
+				<div class="login-end hide">
+					<a href="">
+						<img src="images/3.jpg">
+						<span>短友老王</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- style="background:url(images/bodybg1.jpg) no-repeat top center fixed;" -->
+	<div class="home-wrap" >
+		<div class="home-head">
+			<div class="home-user-info">
+				<!-- <div class="user-pic"><img src="images/5.jpg"></div>
+				<div class="user-name"><strong>无聊的人做春梦</strong></div>
+				<div class="user-single">&lt;?php include \'foot.php\';?&gt;</div> -->
+			</div>
+			<div class="user-wrap">
+				<div class="user-nav clearfix">
+					<div class="fl nav-box">
+						<a href="javascript:;" data-hash="homes" class="active nav-btn-effect">首页</a>
+						<a class="nav-btn-effect" data-hash="devote" href="javascript:;" >贡献</a>
+						<a class="nav-btn-effect" data-hash="comment" href="javascript:;">评论</a>
+						<a class="nav-btn-effect" data-hash="shoucang" href="javascript:;">收藏</a>
+						<!-- <a href="">声音</a> -->
+					</div>
+					<div class="fr push">
+						<a href="push.html"><i></i>做贡献</a>
+					</div>
+				</div>
+				<div class="copytag" style="width: 1100px; height:51px; display:none;"></div>
+				<div class="user-content-box clearfix">
+					<div data-hash="homes" class="user-box  init-user-wrap clearfix" style="display:block;">
+						<div class="sider-bar fl">
+							<div class="forme-wrap">
+								
+							</div>
+							<!-- 我的关注 -->
+							<div class="LatestVisitors">
+								<h2>我的关注</h2>
+								<div class="LatestVisitors-list">
+									<a href=""><img src="images/2.jpg"><span>生活</span></a>
+									<a href=""><img src="images/1.jpg"><span>妈妈说好好生活</span></a>
+									<a href=""><img src="images/5.jpg"><span>妈妈说好好生活</span></a>
+									<a href=""><img src="images/4.jpg"><span>妈妈说好好生活</span></a>
+									<a href=""><img src="images/3.jpg"><span>妈妈说好好生活</span></a>
+									<a href=""><img src="images/6.jpg"><span>妈妈说好好生活</span></a>
+									<a href=""><img src="images/3.jpg"><span>妈妈说好好生活</span></a>
+									<a href=""><img src="images/2.jpg"><span>妈妈说好好生活</span></a>
+									<a href=""><img src="images/4.jpg"><span>妈妈说好好生活</span></a>
+								</div>
+							</div>
+							<!-- 最近访客 -->
+							<!-- <div class="LatestVisitors">
+								<h2>最近访客</h2>
+								<div class="LatestVisitors-list">
+									<a href=""><img src="images/2.jpg"><span>生活</span></a>
+									<a href=""><img src="images/1.jpg"><span>妈妈说好好生活</span></a>
+									<a href=""><img src="images/5.jpg"><span>妈妈说好好生活</span></a>
+									<a href=""><img src="images/4.jpg"><span>妈妈说好好生活</span></a>
+									<a href=""><img src="images/3.jpg"><span>妈妈说好好生活</span></a>
+									<a href=""><img src="images/6.jpg"><span>妈妈说好好生活</span></a>
+									<a href=""><img src="images/3.jpg"><span>妈妈说好好生活</span></a>
+									<a href=""><img src="images/2.jpg"><span>妈妈说好好生活</span></a>
+									<a href=""><img src="images/4.jpg"><span>妈妈说好好生活</span></a>
+								</div>
+							</div> -->
+						</div>
+						<div class="user-content fl">
+							<h2>好友动态</h2>
+							<div class="user-friend">
+								<div class="user-friend-line">
+									<div class="user-friend-head">
+										<a href=""><img class="f-nick-pic" src="images/4.jpg"></a>
+										<div class="user-friend-info">
+											<div class="f-nick">
+												<a href="">hot Dog</a>
+											</div>
+											<div class="info-detail">
+												<span class="push-time">2017-2913813</span>
+												<a href="javascript:;" class="f-sign-show">你本无意穿风堂，偏偏孤据引山洪</a>
+											</div>
+										</div>
+									</div>
+									<div class="f-single-content">
+										甚是思念，不知不觉中分隔已一年，我的老同们你们在哪呢
+									</div>
+									<div class="f-single-foot clearfix">
+										<span class="fl visitor">浏览98次</span>
+										<div class="fr comment-handle f-comment">
+											<span class="zan-btn" satinid="4"><i class="zan"></i>278</span>												
+										</div>
+									</div>
+								</div>
+								<div class="user-friend-line">
+									<div class="user-friend-head">
+										<a href=""><img class="f-nick-pic" src="images/4.jpg"></a>
+										<div class="user-friend-info">
+											<div class="f-nick">
+												<a href="">hot Dog</a>
+											</div>
+											<div class="info-detail">
+												<span class="push-time">2017-2913813</span>
+												<a href="javascript:;" class="f-sign-show">春风得意马蹄疾，一日看尽长安花</a>
+											</div>
+										</div>
+									</div>
+									<div class="f-single-content">
+										甚是思念，不知不觉中分隔已一年，我的老同们你们在哪呢
+									</div>
+									<div class="f-single-foot clearfix">
+										<span class="fl visitor">浏览98次</span>
+										<div class="fr comment-handle f-comment">
+											<span class="zan-btn" satinid="4"><i class="zan"></i>278</span>								
+															
+										</div>
+									</div>
+								</div>
+
+
+								<div class="user-friend-line">
+									<div class="user-friend-head">
+										<a href=""><img class="f-nick-pic" src="images/4.jpg"></a>
+										<div class="user-friend-info">
+											<div class="f-nick">
+												<a href="">张全蛋</a>
+											</div>
+											<div class="info-detail">
+												<span class="push-time">2017-2913813</span>
+												<a href="javascript:;" class="f-sign-show">春风得意马蹄疾，一日看尽长安花</a>
+											</div>
+										</div>
+									</div>
+									<div class="f-single-content">
+										甚是思念，不知不觉中分隔已一年，我的老同们你们在哪呢
+									</div>
+									<div class="f-single-foot clearfix">
+										<span class="fl visitor">浏览98次</span>
+										<div class="fr comment-handle f-comment">
+											<span class="zan-btn" satinid="4"><i class="zan"></i>278</span>								
+															
+										</div>
+									</div>
+								</div>
+
+								<div class="user-friend-line">
+									<div class="user-friend-head">
+										<a href=""><img class="f-nick-pic" src="images/4.jpg"></a>
+										<div class="user-friend-info">
+											<div class="f-nick">
+												<a href="">尼古拉斯.找死</a>
+											</div>
+											<div class="info-detail">
+												<span class="push-time">2017-2913813</span>
+												<a href="javascript:;" class="f-sign-show">春风得意马蹄疾，一日看尽长安花</a>
+											</div>
+										</div>
+									</div>
+									<div class="f-single-content">
+										甚是思念，不知不觉中分隔已一年，我的老同们你们在哪呢
+									</div>
+									<div class="f-single-foot clearfix">
+										<span class="fl visitor">浏览98次</span>
+										<div class="fr comment-handle f-comment">
+											<span class="zan-btn" satinid="4"><i class="zan"></i>278</span>								
+															
+										</div>
+									</div>
+								</div>
+
+
+								<div class="user-friend-line">
+									<div class="user-friend-head">
+										<a href=""><img class="f-nick-pic" src="images/4.jpg"></a>
+										<div class="user-friend-info">
+											<div class="f-nick">
+												<a href="">无聊时做春梦</a>
+											</div>
+											<div class="info-detail">
+												<span class="push-time">2017-2913813</span>
+												<a href="javascript:;" class="f-sign-show">春风得意马蹄疾，一日看尽长安花</a>
+											</div>
+										</div>
+									</div>
+									<div class="f-single-content">
+										甚是思念，不知不觉中分隔已一年，我的老同们你们在哪呢
+									</div>
+									<div class="f-single-foot clearfix">
+										<span class="fl visitor">浏览98次</span>
+										<div class="fr comment-handle f-comment">
+											<span class="zan-btn" satinid="4"><i class="zan"></i>278</span>								
+															
+										</div>
+									</div>
+								</div>
+
+
+								<div class="user-friend-line">
+									<div class="user-friend-head">
+										<a href=""><img class="f-nick-pic" src="images/4.jpg"></a>
+										<div class="user-friend-info">
+											<div class="f-nick">
+												<a href="">hot Dog</a>
+											</div>
+											<div class="info-detail">
+												<span class="push-time">2017-2913813</span>
+												<a href="javascript:;" class="f-sign-show">春风得意马蹄疾，一日看尽长安花</a>
+											</div>
+										</div>
+									</div>
+									<div class="f-single-content">
+										甚是思念，不知不觉中分隔已一年，我的老同们你们在哪呢
+									</div>
+									<div class="f-single-foot clearfix">
+										<span class="fl visitor">浏览98次</span>
+										<div class="fr comment-handle f-comment">
+											<span class="zan-btn" satinid="4"><i class="zan"></i>278</span>								
+															
+										</div>
+									</div>
+								</div>
+
+
+								<div class="user-friend-line">
+									<div class="user-friend-head">
+										<a href=""><img class="f-nick-pic" src="images/4.jpg"></a>
+										<div class="user-friend-info">
+											<div class="f-nick">
+												<a href="">hot Dog</a>
+											</div>
+											<div class="info-detail">
+												<span class="push-time">2017-2913813</span>
+												<a href="javascript:;" class="f-sign-show">春风得意马蹄疾，一日看尽长安花</a>
+											</div>
+										</div>
+									</div>
+									<div class="f-single-content">
+										甚是思念，不知不觉中分隔已一年，我的老同们你们在哪呢
+									</div>
+									<div class="f-single-foot clearfix">
+										<span class="fl visitor">浏览98次</span>
+										<div class="fr comment-handle f-comment">
+											<span class="zan-btn" satinid="4"><i class="zan"></i>278</span>								
+															
+										</div>
+									</div>
+								</div>
+
+								<div class="user-friend-line">
+									<div class="user-friend-head">
+										<a href=""><img class="f-nick-pic" src="images/4.jpg"></a>
+										<div class="user-friend-info">
+											<div class="f-nick">
+												<a href="">hot Dog</a>
+											</div>
+											<div class="info-detail">
+												<span class="push-time">2017-2913813</span>
+												<a href="javascript:;" class="f-sign-show">春风得意马蹄疾，一日看尽长安花</a>
+											</div>
+										</div>
+									</div>
+									<div class="f-single-content">
+										甚是思念，不知不觉中分隔已一年，我的老同们你们在哪呢
+									</div>
+									<div class="f-single-foot clearfix">
+										<span class="fl visitor">浏览98次</span>
+										<div class="fr comment-handle f-comment">
+											<span class="zan-btn" satinid="4"><i class="zan"></i>278</span>								
+															
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-hash="devote" style="display:none;" class="devote user-box clearfix">
+						<div class="fl devote-nav">
+							<div class="devote-nav-wrap">
+								<!-- <a href="javascript:;" class="active">全部</a> -->
+								<a href="javascript:;" class="active">文章</a>
+								<a href="javascript:;">段子</a>
+								<a href="javascript:;">图集</a>
+							</div>
+						</div>
+						<div class="fr devote-content">
+							<div class="devote-command satin-warp">
+								<div class="devote-list show wanan-wrap-box wananlist-l-content">
+									
+								</div>
+
+								<div class="devote-list hide satin-l ">
+									<div class="satin-list"></div>
+									<div class="load-more"><a href="javascript:;" id="loadmore" typeid="1" nowpage="1">加载更多</a></div>
+								</div>
+								<div class="devote-list hide">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-hash="comment" style="display:none; background:#fff;" class="user-box comment clearfix">
+						<div class="comment-wrap">
+							<div class="comment-line ">
+								<div class="comment-line-title">
+									<h2>无聊的人做春梦 的评论</h2>
+								</div>
+								<div class="commentWrap">
+									<!-- <div class="comment-line-list">
+										<div class="comment-line-info">
+											<a href="">可怜兮兮</a> 评论了 <a href="">915268482</a> 的段子 <a href="">《css3跳动的音符》</a>
+										</div>
+										<div class="comment-content"><span>评论详情：</span>rem：是指相对于根元素（即html元素）的字体大小的单位。是CSS3新增的一个相对单位，使用rem为元素设定字体大小时，相对大小对比的是HTML根元素。这个单位可谓集相对大小和绝对大小的</div>
+									</div> -->
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div data-hash="shoucang" style="display:none;background:#fff;" class="user-box shoucang clearfix">
+						
+						<div class="comment-wrap ">
+							<div class="comment-line">
+								<div class="comment-line-title">
+									<h2>无聊的人做春梦 的收藏</h2>
+								</div>
+
+								<div class="colectionWrap">
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="footer-content"><p>如有疑问，请联系：513632026@qq.com</p></div>
+	</div>
+	<script type="text/javascript">
+		var oSatin=new Wanan(),
+		ismedias='',
+		userid=parseInt(oSatin.geturldata().id);
+		oSatin.userData();
+		oSatin.userAllEffect();
+		oSatin.GetArcList(ismedias,userid);
+		oSatin.upDataView();
+		oSatin.GetMyCollection(1,50);
+		oSatin.GetMyComment(1,50);
+		oSatin.satin(userid);
+	</script>
+	<script type="text/javascript" src="js/user_bg.js"></script>
+</body>
+</html>

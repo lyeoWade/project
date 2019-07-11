@@ -1,0 +1,192 @@
+.rel {
+  position: relative;
+}
+.abs {
+  position: absolute;
+}
+.fix {
+  position: fixed !important;
+}
+.snh1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+body {
+  background: #fcfcfc;
+  color: #222;
+}
+.autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+.boxcenter {
+  width: 1100px;
+  margin: 0 auto;
+}
+.bgwrite {
+  background: #ffffff;
+}
+a {
+  color: #4f5157;
+  transition: all 0.3s ease-in;
+}
+a:hover {
+  color: #f46;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.combtn {
+  padding: 8px 20px;
+  color: #ffffff;
+  background: #f46;
+  cursor: pointer;
+}
+.combtn:active {
+  box-shadow: 0 1px 5px #f46;
+}
+#nav-warp {
+  height: 60px;
+  position: relative;
+  background: #ffffff;
+}
+#nav-warp .nav-wrap-box {
+  height: 60px;
+  width: 1100px;
+  margin: 0 auto;
+}
+#nav-warp .site-nav {
+  line-height: 60px;
+  font-size: 0;
+}
+#nav-warp .site-nav a {
+  font-size: 16px;
+  padding: 6px 20px;
+  transition: all 0.3s ease-in;
+  color: #222;
+}
+#nav-warp .site-nav a:hover {
+  color: #ffffff;
+  background: #f46;
+}
+#nav-warp .site-nav a.active {
+  color: #ffffff;
+  background: #f46;
+}
+#nav-warp .login-wrap {
+  line-height: 60px;
+}
+#nav-warp .login-wrap a {
+  margin: 10px;
+  color: #222;
+}
+#nav-warp .login-wrap .reg {
+  color: #ffffff;
+  padding: 4px 15px;
+  background: #f46;
+}
+#nav-warp .login-end {
+  line-height: 60px;
+}
+#nav-warp .login-end img {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px 18px 18px 18px;
+  vertical-align: middle;
+}
+#nav-warp .login-end span {
+  margin-left: 5px;
+  color: #222;
+}
+.site-search {
+  margin-left: 20px;
+  padding-top: 5px;
+  position: relative;
+}
+.site-search input {
+  height: 24px;
+  width: 230px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+}
+.site-search a {
+  display: block;
+  width: 32px;
+  height: 28px;
+  background: #ccc;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  background: url(../images/search.png) center center no-repeat;
+  background-size: 70%;
+}
+.rotate720 {
+  transition: 3s;
+}
+.rotate720:hover {
+  transform: rotate(720deg);
+}
+.nodata {
+  display: block;
+  text-align: center;
+  padding: 50px 0;
+}
+.satin-line-handle {
+  height: 32px;
+  line-height: 32px;
+  margin-top: 10px;
+  position: relative;
+}
+.satin-line-handle span {
+  padding: 5px 10px;
+  border: 1px solid #f1f1f1;
+  color: #bfbfbf;
+  cursor: pointer;
+}
+.satin-line-handle span.comment-btn a {
+  color: #bfbfbf;
+}
+.satin-line-handle span:hover .zan {
+  animation: zan 1s;
+}
+.satin-line-handle span:hover .cai {
+  animation: cai 1s;
+}
+.satin-line-handle span:hover .shoucang {
+  animation: shoucang 1s;
+}
+.satin-line-handle span i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-top: -3px;
+  vertical-align: middle;
+  transition: all 0.5s ease-in;
+}
+.satin-line-handle span i.zan {
+  background: url(../images/zan.png) no-repeat left center;
+  background-size: contain;
+}
+.satin-line-handle span i.zan-active {
+  background: url(../images/zan-active.png) no-repeat left center;
+  background-size: contain;
+}
+.satin-line-handle span i.cai {
+  background: url(../images/cai.png) no-repeat left center;
+  background-size: contain;
+}
+.satin-line-handle span i.cai-active {
+  background: url(../images/cai-active.png) no-repeat left center;
+  background-size: contain;
+}
+.satin-line-handle span i.shoucang {
+  background: url(../images/shoucang.png) no-repeat left center;
+  background-size: contain;
+}
+.satin-line-handle span i.comment {
+  background: url(../images/comment.png) no-repeat left center;
+  background-size: contain;
+}

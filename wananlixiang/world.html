@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>晚安理想</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/world.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/public.js"></script>
+</head>
+<body>
+	<div id="nav-warp" class="">
+		<div class="nav-wrap-box">
+			<div class="nav-l fl">
+				<div class="site-logo fl"><img src=""></div>
+				<div class="site-nav fl">
+					<a href="index.html">首页</a>
+					<a href="wananlist.html">晚安&nbsp;&bull;&nbsp;理想</a>
+					<a href="satin.html" class="">愉悦&nbsp;&bull;&nbsp;段子</a>
+					<a href="world.html" class="active">走遍&nbsp;&bull;&nbsp;世界</a>
+				</div>
+				<!-- <div class="site-search fl">
+					<input type="text" value="" placeholder="sousuo" class="search">
+					<a href="javascrit:;"></a>
+				</div> -->
+			</div>
+			<div class="nav-r fr">
+				<div class="login-wrap show">
+					<a href="reg.html" class="reg">注册</a>
+					<a href="denglu.html" class="login">登录</a>
+				</div>
+
+				<div class="login-end hide">
+					<a href="">
+						<img src="images/3.jpg">
+						<span>短友老王</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 图片列表 -->
+	<style type="text/css">
+	
+	</style>
+	<div id="picList">
+		<div class="picList-wrap clearfix" id="pblbox">
+			<ul></ul>
+		    <ul></ul>
+		    <ul></ul>
+		</div>
+		<div class="loading-more"><a href="javascript:;"><i></i>加载更多</a></div>
+	</div>
+	
+	<div class="footer ">
+		<div class="footer-content"><p>如有疑问，请联系：513632026@qq.com</p></div>
+	</div>
+	<script type="text/javascript">
+		 var oSatin=new Wanan();
+		var PageSize=20,
+			nowpage=1;
+
+		var tag=oSatin.geturldata(window.location.href).tag;
+		oSatin.GetAllPicList(tag,nowpage,PageSize);
+	</script>
+</body>
+</html>

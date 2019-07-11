@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>晚安理想</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/world.css">
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/public.js"></script>
+</head>
+<body style="">
+	<div id="nav-warp" class="piccontent">
+		<div class="nav-wrap-box">
+			<div class="nav-l fl">
+				<div class="site-logo fl"><img src=""></div>
+				<div class="site-nav fl">
+					<a href="index.html">首页</a>
+					<a href="wananlist.html" class="">晚安&nbsp;&bull;&nbsp;理想</a>
+					<a href="satin.html" class="">愉悦&nbsp;&bull;&nbsp;段子</a>
+					<a href="world.html" class="active">走遍&nbsp;&bull;&nbsp;世界</a>
+				</div>
+				<!-- <div class="site-search fl">
+					<input type="text" value="" placeholder="sousuo" class="search">
+					<a href="javascrit:;"></a>
+				</div> -->
+			</div>
+			<div class="nav-r fr">
+				<div class="login-wrap show">
+					<a href="reg.html" class="reg">注册</a>
+					<a href="denglu.html" class="login">登录</a>
+				</div>
+				
+				<div class="login-end hide">
+					<a href="">
+						<img src="images/3.jpg">
+						<span>短友老王</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="pic-layer-wrap">
+		
+	</div>
+	<style type="text/css">
+		.showpic{
+			left: 0px;top: 0px;position: absolute;overflow: hidden;z-index: -2;margin: 0px;padding: 0px;height: 100%;width: 100%; opacity: 0;
+		}
+	</style>
+	<div class="pic-wrap">
+		<div class="pic-wrap-box">
+			<div id="coverpic"  style="left: 0px;top: 0px;position: absolute;overflow: hidden;z-index: -1;margin: 0px;padding: 0px;height: 100%;width: 100%; "></div>
+			<!-- <div class="mark-font"></div> -->
+			<div class="story-cover-title">
+                <div class="wrap">
+                    <div class="title">
+                        <div class="inner">
+                            <div class="date">
+                                
+                            </div>
+                            <div class="detail">
+                                <h1 id="h1-story-title"></h1>
+                                <div class="author"><a href=""></a>
+                                </div>
+                                <div class="info">
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="start-play">播放
+	                    <div class="audio-wrap hide">
+							<audio id="pic-bgm-audio" controls autoplay src="">你的浏览器不支持HTML5播放器</audio>
+						</div>
+					</div> -->
+                    <div class="start-show">开始</div>
+                </div>
+            </div>
+
+            <div class="prevbtn"></div>
+            <div class="nextbtn"></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		var oSatin=new Wanan();
+		oSatin.GetPicdetail();
+		oSatin.pageView(2);
+	</script>
+	<div class="footer hide">
+		<div class="footer-content"><p>如有疑问，请联系：513632026@qq.com</p></div>
+	</div>
+</body>
+</html>
