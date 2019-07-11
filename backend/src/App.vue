@@ -38,7 +38,7 @@
         </el-aside>
 
 
-       <Bread></Bread>
+       <Bread :breads="breads"></Bread>
 
 
       </el-container>
@@ -89,7 +89,8 @@ export default {
   name: 'App',
   data(){
     return {
-      NavRouteArr:NavRouteArr
+      NavRouteArr:NavRouteArr,
+      breads:''
     }
   },
   computed:{
@@ -105,6 +106,12 @@ export default {
   },
   components:{
     Bread
+  },
+  created(){
+    this.$bus.$on('breads',(data)=>{          
+        console.log(data);
+        this.breads=data;
+    })
   }
 }
 </script>

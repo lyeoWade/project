@@ -17,10 +17,16 @@ Vue.config.productionTip = false
 
 
 import EventBus from './EventBus.js';
+
 Vue.prototype.$bus=EventBus;
 
+//console.log(EventBus)
 
 
+import axios from 'axios'
+//console.log(Moment('2017-04-03 13:28:16').format("YYYYMMDD"));
+//http://localhost/nba2
+axios.defaults.baseURL='http://localhost/project/phpdata/datapage/';
 
 
 

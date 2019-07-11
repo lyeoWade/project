@@ -199,7 +199,7 @@
 				//$result[$i]="{id':'".$row["id"]."','title':'".$row["title"]."','descption':'".$row["descption"]."','banner':'".$row["bannerimg"]."','datatime':'".$row["datatime"]."','keywords':'".$row["keywords"]."','page_view':'".$row["page_view"]."','username':'".$row["username"]."','isrecommend':'".$row["isrecommend"]."','newtype':'".$row["type_id"]."','userid':'".$row["userid"]."','status':'".$row["status"]."','thumb':'".$match[1]."'}";
 				
 				//$raw_success = array('code' => 1, 'msg' => '验证码正确');
-				$result[$i] = array('id' => $row["id"] , "title" =>$row["title"] , "page_view" =>$row["page_view"] , "newtype" =>$row["type_id"] , "thumb" =>$temp , "datatime" =>$row["datatime"] , "keywords" =>$row["keywords"] );
+				$result[$i] = array('id' => $row["id"] , "title" =>$row["title"] , "page_view" =>$row["page_view"] , "newtype" =>$row["type_id"] , "thumb" =>$temp , "datatime" =>$row["datatime"], "isrecommend" =>$row["isrecommend"] , "keywords" =>$row["keywords"] );
 				$i++;
 			};
 			$a=json_encode($result);

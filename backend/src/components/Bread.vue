@@ -5,7 +5,7 @@
 
 	    <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
 	    <el-breadcrumb-item v-for="(item,i) in breads" :key='i'>{{item}}</el-breadcrumb-item>
-
+		
 	  </el-breadcrumb>
 	  <router-view/>
 	</el-main>
@@ -16,17 +16,19 @@ export default {
 	name:'Bread',
 	data(){
 		return {
-			breads:''
 		}
 	},
+	props:['breads'],
+	computed:{
+		
+	},
 	mounted(){
-
+		//this.getBreads()
 		console.log(this.$bus)
-		this.$bus.$on('breads',(data)=>{	      	
-	      	console.log(data);
-
-	      	this.breads=data;
-	    })
+		 // this.$bus.$on('breads',(data)=>{	      	
+		 //      	console.log(data);
+		 //      	this.breads=data;
+		 //    })
 	}
 }
 
